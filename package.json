@@ -10,5 +10,8 @@
   "author": "Md. Kabirul Hossain",
   "license": "ISC",
   "type": "commonjs",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
 }
