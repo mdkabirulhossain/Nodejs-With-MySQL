@@ -18,7 +18,8 @@ con.connect((err)=>{
         console.log('Connection Success');
         //InsertData(con);
         //deleteData(con);
-        UpdateData(con);
+        //UpdateData(con);
+        SelectData(con);
     }
     else{
         console.log('connection fail');
@@ -52,7 +53,6 @@ const deleteData= (con)=>{
 }
 
 //Update Data
-
 const UpdateData = (con) =>{
     let SQLQuery = "UPDATE `student_list` SET `name`='Md. Kabirul Hossain' WHERE `id`=1"
     con.query(SQLQuery, (err)=>{
@@ -60,6 +60,19 @@ const UpdateData = (con) =>{
             console.log('Update Data Successfully!');
         }else{
             console.log("Data Not Updated!!");
+        }
+    })
+}
+
+//Read Data
+const SelectData = (con) =>{
+    let SQLQuery = "SELECT * FROM `student_list`"
+    con.query(SQLQuery, (err, data)=>{
+        if(!err){
+            console.log('Read Data Successfully!!');
+            console.log(data);
+        }else{
+            console.log("Data Read Fail!!");
         }
     })
 }
