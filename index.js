@@ -70,6 +70,7 @@ const SelectData = (con) =>{
     con.query(SQLQuery, (err, data)=>{
         if(!err){
             console.log('Read Data Successfully!!');
+            //Print data
             console.log(data);
         }else{
             console.log("Data Read Fail!!");
