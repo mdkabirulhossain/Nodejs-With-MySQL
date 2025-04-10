@@ -65,6 +65,7 @@ const UpdateData = (con) =>{
 }
 
 //Read Data
+//Need to learn query properly
 const SelectData = (con) =>{
     let SQLQuery = "SELECT * FROM `student_list`"
     con.query(SQLQuery, (err, data)=>{
